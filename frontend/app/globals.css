@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Noto+Sans+Bengali:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0b0f17;
+  --foreground: #f1f5f9;
+  --card: #111827;
+  --card-border: #1e293b;
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --accent: #6366f1;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0f17;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Checkerboard canvas background pattern */
+.canvas-grid-bg {
+  background-color: #1e293b;
+  background-image: 
+    linear-gradient(45deg, #0f172a 25%, transparent 25%), 
+    linear-gradient(-45deg, #0f172a 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, #0f172a 75%), 
+    linear-gradient(-45deg, transparent 75%, #0f172a 75%);
+  background-size: 24px 24px;
+  background-position: 0 0, 0 12px, 12px -12px, -12px 0px;
+}
+
+/* Smooth glass effect */
+.glass-panel {
+  background: rgba(17, 24, 39, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
